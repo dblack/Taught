@@ -1,0 +1,71 @@
+# $Id: README,v 1.2 2001/01/24 21:19:11 dblack Exp $
+# $Name: Taught-0-0-3-pre1 $
+# $Author: dblack $
+
+The suite, as it's shaping up, October 2000:
+
+Taught.pm  -- needs to be updated, to mesh with some of the other stuff
+
+Taught::Definer -- useful for the roster and course-description files,
+                    also likely to become useful for grade files.
+
+Roster.pm  -- a subclass of Definer.  It understands the roster format,
+              and also provides object methods (in addition to the tied
+              hash access) to create lists and grids.
+
+CFile.pm        -- defines the course description file
+
+BareFile.pm -- ancestor class for roster and class list.
+
+GradeTool.pm -- define grade calibrations and such
+
+Gradesheet.pm -- defines the grade sheet 
+
+Gradereport.pm -- defines the grade report file
+
+
+
+Standalone programs:
+
+makelist2
+makegrid2
+gradelog
+gradereport
+setup
+prepterm
+
+Still needed:
+
+A way to update one student at a time.
+
+Add creation of grade sheets to setup, or automate it per term/course.
+
+Automatically do grade reports for a whole term/course.
+
+
+Here's how it should go:
+
+ONE-TIME SETUP:
+
+./setup
+
+START OF SEMESTER:
+
+./setup -t fall2000 --copy fall1999
+(create rosters by hand)
+./prepterm -t fall2000          # recursively create all grids and lists
+./makegradesheets -t fall2000   # do all the grade sheets, per roster/cfile, for all sections
+  # should be part of prepterm
+
+DURING SEMESTER
+
+(update rosters by hand)
+./makegradesheets -t fall2000   # will preserve any grades that are there, will weed out students
+                                # who are no longer in roster.
+./loggrade -t/c/s               # log a section's grades for an assignment
+
+END OF SEMESTER
+
+./loggrade -t/c/s               # if still needed
+./dogrades -t [-c [-s]]         # recursively do grading in all sections
+

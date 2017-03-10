@@ -1,0 +1,70 @@
+#!/usr/bin/perl -w
+#
+#   qsetup -- experimental way of initializing a teaching
+#   directory.  It parses a spec file.  (See "auto", in
+#   docs directory.)
+#
+#  $Id: qsetup,v 1.2 2001/01/24 21:25:53 dblack Exp $
+#  $Name: Taught-0-0-3-pre1 $
+#  $Author: dblack $
+
+use strict;
+
+my $file = shift or die "File name required.\n";
+
+open(IN, $file) or die $!;
+
+my %specs;
+my %reqs;
+my ($t, $c, $s, $r);
+
+while (<IN>) {
+    next unless /\s*[^#]/;
+    /(\w+):\s*(.+)/ or die "Invalid line: $_\n";
+    my ($type, $spec) = ($1, $2);
+
+    if ($type eq "term") {
+        $t = $spec;
+        $specs{$t} = {};
+    }
+    elsif ($type eq "course") {
+        $c = $spec;
+        $specs{$t}{$c} = {};
+    }
+    elsif ($type eq "section") {
+        $s = $spec;
+        $specs{$t}{$c}{$s} = {};
+    }
+    elsif ($type eq "req") {
+        $r = $spec;
+        my ($name, $value) = $r =~ /([^=]+?)\s*=\s*([^=]+)/;
+        $reqs{$t}{$c}{$name} = $value;
+    }
+}
+
+local $\ = "\n";
+my @terms = sort keys %specs;
+print "teee";
+print join ', ', @terms;
+for my $term (@terms) {
+    my @courses = sort keys %{$specs{$term}};
+    print join ', ', @courses;
+    for my $course (@courses) {
+        print join ', ', sort keys %{$specs{$term}{$course}}
+    }
+}
+
+print "y";
+
+my %seen;
+for my $term (@terms) {
+    my @courses = sort keys %{$specs{$term}};
+    for my $course (@courses) {
+        if ($seen{$course}) {
+            print "n";
+        }
+        $seen{$course}++;
+        print join ', ',
+        map { "$_ = " . $reqs{$term}{$course}{$_}} keys %{$reqs{$term}{$course}}; 
+    }
+}

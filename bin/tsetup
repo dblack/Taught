@@ -1,0 +1,221 @@
+#!/usr/bin/perl -w
+#
+# tsetup -- create or update the ~/teaching hierarchy
+#
+# $Id: tsetup,v 1.3 2001/01/24 21:25:53 dblack Exp $
+# $Name: Taught-0-0-3-pre1 $
+# $Author: dblack $
+
+
+$| = 1;
+
+
+$VERSION = '0.0.3';
+
+use Getopt::Std;
+use Carp;
+use lib ".";
+use File::Path;
+use File::Basename;
+use Taught qw(:standard);
+
+use strict;
+
+umask 077;
+
+my $tprompt     = "\nTerm: (blank line to quit) ? ";
+my $tre         = '^([^\W\d]+\d+)?$';
+my $twarn       = "\nLetters followed by numbers, please (e.g., fall1999)\n";
+my $cprompt     = "Course to add or update (blank line to quit to previous level) ? ";
+my $cre         = '^\w*$';
+my $cwarn       = "\nAlphanumeric characters only, please.\n";
+my $sprompt     = "Section number: (blank line to quit to previous level) ? ";
+my $sre         = '^\S*$';
+my $swarn       = "\nNon-space characters only, please.\n";
+my $rprompt     = 'Requirement (e.g., "Final Exam") (blank line to quit to previous level): '; 
+
+my %opts; getopts('x', \%opts);     # -x = expert mode
+
+my $bindir      = dirname($0);
+chomp $bindir;
+
+my $home            = $ENV{HOME};
+my $TAUGHT      = $ENV{TAUGHT} || "$home/teaching";
+my $first       = ! -d $TAUGHT;
+do {
+        print "\n", join "\n",
+        "Welcome to the Taught setup/update program!\n",
+        "What is your top-level teaching directory",
+        "(just hit <ENTER> for default of $TAUGHT) ?";
+
+        chomp (my $tdir = <STDIN>);
+        $TAUGHT = "$home/$tdir" if $tdir;
+        mkdir $TAUGHT, 0777 unless -d $TAUGHT;
+}
+    until chdir $TAUGHT ||! print "Can't chdir there: $!\n";
+
+$ENV{TAUGHT} = $TAUGHT;
+
+scan Taught;
+
+my $term = 1;
+
+TERM:
+while ($term) {
+    my $ch = 0;
+    my @terms = terms();
+    if (@terms) {
+        print "\nChoose a term, or #", @terms + 1,
+            " to enter a new one by hand.\n\n";
+        $ch = tinymenu(\@terms, "Specify a new term\n");
+        last unless length $ch;
+    }
+
+    if ($ch && $ch <= @terms) {
+        $term = $terms[$ch - 1]
+    }
+    else {
+        $term = getclean($tprompt, $tre, $twarn);
+    }
+
+    last unless length $term;
+
+    if (! isterm($term) ) {
+        newterm( { Term => $term } )
+            or warn
+                "Trouble with term $term: $!"
+            and next TERM
+    }
+    else {
+        print "\nUpdating existing term $term\n"
+    }
+
+    my $course = 1;
+
+COURSE:
+    while ( $course = getclean($cprompt, $cre, $cwarn) ) {
+        last COURSE unless length $course;
+
+        my $reqs = {};
+
+        if (my @old = grep { ! /^$term$/ } terms_with($course)) {
+            print show_old($course);
+            my $ch = tinymenu(\@old, "Enter new requirements\n");
+            next COURSE unless length $ch;
+            if ($ch && $ch <= @old) {
+                $reqs = { reqs($old[$ch - 1], $course ) };
+            }
+        }
+
+        if (!keys %$reqs) {
+            my $total = 0;
+
+REQ:
+            while (1) {
+                print $rprompt;
+                chomp (my $req = <STDIN>);
+                last REQ unless $req;
+
+                my $value = getclean(
+                                    "Percentage value of $req: ",
+                                    '^([0-9][0-9]?|100)$',
+                                    "Please enter a number from 0-100.\n");
+    
+                $reqs->{$req} = $value;
+                $total += $value;
+                print weirdtotal($total) if $total > 100;
+            }
+            print weirdtotal($total) if $total < 100;
+        }
+    
+        newcourse({
+                        Term            => $term,
+                        Course      => $course,
+                        reqs            => $reqs,
+                        clobber     => 1            })
+            or warn
+                "Trouble with course $term/$course: $!"
+            and next COURSE;
+
+        my $section = "DuMmY";      # don't use "1" for this
+
+SECTION:
+        while ( $section = getclean($sprompt, $sre, $swarn) ) {
+            next SECTION unless length $section;
+            newsection({
+                            Term        => $term,
+                            Course  => $course,
+                            Section => $section, })
+                or warn
+                    "Trouble with section $term/$course/$section: $!"
+                and next SECTION;
+        }           
+    }
+}
+
+chdir $TAUGHT or die "Can't chdir to $TAUGHT: $!\n";
+
+-d or mkpath $_ or die "Can't mkpath $_: $!"
+    for qw(docs bin);
+
+chdir $bindir or die $!;
+for my $p (<*>) {
+    if (! -e "$TAUGHT/$p") {
+        system("cp $p $TAUGHT/bin")
+            && warn "Can't copy $p to $TAUGHT/bin: $!\n";
+    }
+}
+
+print "Done!\n\n";
+
+sub getclean {
+    my ($prompt, $regex, $warning) = @_;
+    my $input;
+    do {
+        print $prompt;
+        chomp ($input = <STDIN>);
+    }
+    until
+        $input =~ /$regex/
+        ||! print $warning;
+
+    return $input;
+}
+        
+sub show_old {
+    my $course = shift;
+    <<EOM;
+
+$course has been offered in one or more other terms.
+If you'd like to copy the requirements from a previous term,
+enter the appropriate number from this menu.  There's also
+an option for re-doing the requirements.
+
+EOM
+}
+
+sub weirdtotal {
+    my $total = shift;
+    <<EOM;
+
+**
+* Warning: percentages add up to $total
+* (may have to be fixed by hand)
+**
+
+EOM
+}
+
+sub tinymenu {
+    my ($items, $other) = @_;
+    my @items = @$items;
+    push @items, $other if $other;
+    my $mc = 0;
+    print ++$mc . ".  $_\n"
+        for (@items);
+    my $re = '^(' . (join '|', (1..@items)) . ')?$';
+    my $ch = getclean("Your choice: (blank line to quit back to previous level): ", $re,
+        "Please enter a number (1 to $mc)\n");
+}
+
+

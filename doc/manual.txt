@@ -1,0 +1,354 @@
+Introduction and Overview
+
+Welcome to the Taught suite of course-management software.
+
+Taught is a suite of modules and programs designed to help
+teachers with record-keeping tasks.  Taught can help you
+maintain a class roster, enter grades for assignments, and
+do the calculation of final grades.  Taught can also
+automatically generate nicely formatted attendance sheets
+and gradebook pages, printed with the names of your
+students.   A number of utility programs are supplied; if
+you are a Perl programmer, you can also use the Taught
+modules to write your own programs or extensions.
+
+Taught is very unfancy.  It operates via the command line,
+and it stores all of your data in plain-text files.  This is
+by choice.  First, I prefer command-line interaction to GUI
+interaction; second, one of my main purposes in writing Taught
+was to automate course management while still preserving the
+ability to edit rosters and grade files by hand when I
+wanted to.  If you edit your Taught data files by hand, you
+just have to be aware of a few conventions that Taught uses
+(like starting comment lines with the '#' character), so
+that after you've edited a roster or grade sheet by hand,
+Taught will still be able to process it.
+
+In short, if you want to reduce many of your course
+management to a few simple interactive commands, combined
+when appropriate with manual editing of lists and grades,
+Taught may suit you very well.
+
+System and software requirements
+
+I have developed Taught on Linux machines exclusively (one
+Pentium, one Sparc).  It uses Perl and optionally TeX.  I've
+tried not to hard-code it to the *nix world, but I haven't
+tested it on any other platform.  
+
+A couple of Taught examples
+
+To give you a sense of what Taught does, here's a typical
+Taught command line for the "gradelog" program, which is
+used for interactive entry of grades:  
+
+gradelog -t fall1999 -c seminar -s aa
+
+The options in this example mean: section aa of the seminar
+course, Fall 1999 term.  gradelog will respond with a list
+of all the assignments for that course, and let you choose
+which one(s) you want to record grades for.  Then it will go
+through the class roster and let you input each student's
+grade.
+
+Here's another example: we're going to create a LaTeX
+attendance sheet, for the same section as the above:
+
+makegrid -t fall1999 -c seminar -s aa
+
+The result of this will be a .tex file and a .dvi file, in
+the subdirectory of section aa (see below for more on
+Taught's directory structure), with the names of all the
+students in the section and a row of boxes next to each
+name, suitable for marking attendance.  (There are options
+to makegrid which allow you to control the number and size
+of the boxes.)
+
+The Taught directory structure
+
+Overview
+
+Taught keeps track of your class rosters and other data by
+means of a directory structure which parallels the
+real-life structure of semesters, courses, and sections.
+The top-level directory, called ~/teaching by default,
+contains a subdirectory for every term.  Each term directory
+contains one or more course subdirectories.  Finally,
+each course subdirectory contains one or more section
+subdirectories:
+
+~/teaching              # master directory
+   fall1999/            # Fall 1999 term
+     seminar            # Seminar
+        aa              # Section aa
+        bb              # Section bb
+     welles             # Course on Orson Welles
+        aa              # only has one section
+   spring2000/          # next term....
+     ....
+
+In addition to this tree of term-courses-sections, Taught
+maintains some utility directories.  Each
+term/course/section directory (as well as ~/teaching itself)
+has a subdirectory called "docs".  You may put anything you
+like in these "docs" areas; Taught never examines or changes
+them.  Each course directory also has a subdirectory called
+"lists", which contains symbolic links to any DVI files you
+have created for attendance sheets and gradebook pages.  The
+top-level directory, ~/teaching, has a "bin" subdirectory,
+which contains the Taught utility programs.
+
+Taught also has naming and placement conventions for the
+files it creates.  Every section directory has a file called
+"roster" (the class list).  When you log the grades for an
+assignment, those grades are saved in a file called
+"gradesheet", also in the appropriate section directory.
+When Taught does the calculation of final grades for the
+semester, it saves them in a file called "report".  Every
+course directory has a file called "cfile", which contains
+the names and percentage values of all the assignments for
+the course.  It is by merging this file with the class
+rosters that Taught keeps track of grading.
+
+When you use the Taught utilities, you don't have to worry
+about the directory structure.  In most cases -- for instance,
+if you want to log grades for a particular assignment -- you
+just indicate with command-line options which term, course, and
+section you want to address.  Still, it's useful to know about
+the directory structure in case you want to edit anything by
+hand.  Of course, if you create or change a Taught data file
+by hand, make sure you use the right name when you save the
+file.  
+
+Extended tree view of the Taught directory structure
+
+Here's a more detailed tree view of the Taught directory
+structure.  In this example, you're teaching one Seminar
+section, and two sections of a history survey course:
+
+
+                               ~/teaching/
+                                    |
+    -------------------------------------------------------------------  ...
+    |      |                        |                                 |
+  docs/   bin/                 fall1999/                         spring2000/ 
+                                    |                                ...
+               -----------------------------------------------
+               |       |            |                        |       
+             docs/  lists/       seminar/                histsurv/ 
+                                    |                        |    
+                              ------------                ------- 
+                              |     |    |                |     |
+                            docs/ cfile  AA/              AA/   BB/
+                                         |                |     |
+                                      ---------------    ...   ...
+                                      |      |      |
+                                    docs/ roster gradesheet
+
+
+
+Naming conventions for Taught directories and files
+
+Taught automatically names the files it deals with, and it
+automatically organizes the directories in the correct
+relation to each other.  However, you have to tell Taught
+what you want your directories to be called -- which really
+means you have to tell Taught what semesters you want
+directories for, and what courses and sections.
+
+Semester (or "term") names have to follow a certain pattern:
+they have to consist of a string of letters followed by a
+string of numbers.  Examples of valid term names:
+
+   fall1999
+   fall99
+   f99
+
+Invalid term names would include:
+
+  1st99
+  1999fall
+  thisfall
+
+Course names should be one word, generally a shortened
+version of the full course name.  Choose a name that will
+uniquely and clearly identify the course.  Here are some
+examples from my ~/teaching directories:
+
+  Senior Seminar              ->  seminar
+  Electronic Age in America   ->  eage
+  Alternative Video           ->  altern
+
+Of course, you can reuse the same course name in different
+semesters.  
+
+Section names are generally straightforward: if it's section
+AA, call it AA (or aa).  If your school has weird
+conventions for naming sections, just make sure you use
+one-word, unique (per course) section names, so that Taught
+will be able to create and find the section directories
+easily.  
+
+
+Using Taught
+
+First-time setup
+
+The best way to get started with Taught is to run the
+tsetup program.  In fact, you will probably run this program at
+the beginning of every semester.  When you run it the very first
+time, it creates your top-level teaching directory.
+
+So, assuming you've installed the Taught modules and programs
+correctly, run tsetup.
+
+Beginning of each semester
+
+At the beginning of the semester, you generally need to:
+
+1. create the new term directory, with appropriate course and
+section directories, using the tsetup tool;
+2. create the rosters for all the sections you are teaching;
+3. optionally create LaTeX attendance sheets and gradebook
+pages, using the prepterm tool.
+
+Creating the new term directory
+
+Run tsetup and tell it about the new semester.  tsetup will take you through
+an interactive exchange, where you will tell it which term you want to modify,
+what courses you are teaching, how many sections of each there are, and
+what the assignments (requirements) are for each course.
+
+In general during tsetup, you can enter a blank line to move back to the
+previous level.  For example, if you are teaching two sections of a given
+course, then after you've entered the two sections names, enter a blank
+line and tsetup will stop asking you for sections.  
+
+tsetup will create the course description files for each course you are
+teaching.  In order to save time, tsetup will detect whether you have ever
+taught courses with the same names as the ones you're creating.  If you have,
+tsetup will give you the chance to duplicate the assignments from any of those
+earlier incarnations of the course.  This saves you from having to type "Exam
+1... Exam 2..." every time you offer a given course.
+
+Creating the rosters
+
+Each line of a class roster, according to the Taught format, contains a
+student's name, some blank space, and a number (actually a number-and-dashes
+string, such as a social security number).  It is very easy to create
+such rosters by hand, or by cutting-and-pasting from an existing computerized
+class list.  You need to give each student a number; if you don't have real
+ID or SS numbers, just put "123" or something for each student:
+
+   Black, David A.      012345
+   Person, John Q.      012-34-5678
+
+You can also use the utility a2roster, which takes a file containing
+one student per line (with or without numbers) and creates the roster
+for the section you specify, supplying dummy ID numbers as needed:
+
+   a2roster -t <term> -c <course> -s <section> filename
+
+So all you really need is a plain-text list of your students' names, and
+you can create the roster automatically.
+
+Creating LaTeX attendance sheets and gradebook pages
+
+The makegrid and makelist programs automatically create LaTeX attendance
+sheets (grids with your students' names on them) and gradebook pages
+(suitable for recording comments and a grade for one assignment).  The
+easiest way to make these sheets is with the prepterm utility:
+
+   prepterm -t <term>
+
+Assuming prepterm finds the relevant roster files, it will create the
+appropriate LaTeX files: one overall grid for each section, and one
+gradebook page per assignment per section.  It will also put symbolic
+links to all of the resulting .dvi files in a directory called "lists",
+which is a subdirectory of the term directory.
+
+Then, you need to create the roster file.  
+
+During the semester
+
+The main things you are likely to do during the semester are:
+
+1. make manual changes to the roster and gradesheet
+2. log grades for assignments
+
+Making changes to the roster and gradesheet
+
+The easiest way to do this is by hand, in a text editor.  You can
+delete or comment out students who have dropped the course, and
+add ones who have signed in.
+
+You should keep these two files in sync.  (See more on this below,
+under "Logging grades".)
+
+
+Logging grades
+
+The program "gradelog" lets you enter grade interactively.  You start
+it up like this:
+
+   gradelog -t <term> -c <course> -s <section>
+
+gradelog will show you a list of all the requirements for the course,
+and ask you which one you want to enter grades for.  Then gradelog
+shows you each student's name and waits for you to enter a grade for
+that student.
+
+If you want to enter grades for only some of the students (for example,
+with an assignment that is submitted in shifts during the semester),
+you can just hit <ENTER> to enter a blank grade for any student.
+
+If a grade already exists for a particular student for that assignment, that
+existing grade will be shown along with the student's name:
+
+    Black, David A. [C+]
+
+At that point, you can either hit <ENTER> to accept the existing grade, or
+enter a new one.
+
+When gradelog starts up, it checks two lists of students: the list in the
+section roster, and the list in the section gradesheet, if that gradesheet
+already exists.  If there are discrepancies -- that is, if there are students
+in the roster who are not in the gradesheet, or vice versa -- gradelog will
+warn you.  You must fix those discrepancies by hand.  The student list
+gradelog actually uses is the union of those two lists.  Basically, this means
+that if you delete someone from the roster, you should delete them from the
+gradesheet too, so that they won't resurface during the grading process.
+
+
+End of the semester
+
+Calculate the grades.
+
+To calculate grades, the basic command is:
+
+   dogrades -t <term> -c <course> -s <section>
+
+If you just supply a term, then all courses and sections will be done.
+
+If you just supply and term and a course, then all sections of that
+course will be done.
+
+dogrades reads everything in the "gradesheet" file for the given
+section, calculates the grades, and prints a list of names and final
+semester grades in a file called "report", in the appropriate section
+subdirectory.
+
+How Taught calculates grades
+
+
+
+Programs and modules
+
+tsetup -- do first-time tsetup, and add terms/courses/sections
+prepterm -- every semester, after rosters are set, create
+            grade sheets and lists
+gradelog -- grade an assignment
+dogrades -- calculate and record grades for a section, course, or term
+makelist -- make a list for a particular section
+makegrid -- make a grid for a particular section
+

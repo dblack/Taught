@@ -1,0 +1,41 @@
+#!/usr/bin/perl -w
+
+# May 5, 2000
+# daygenerator
+# Example:  perl daygenerator 9/4/00 12/13/00 135 3
+#           prints all M/W/F between those two dates,
+#           spaced three lines apart (default spacing is 4)
+#
+# David A. Black
+#
+#  $Id: daygenerator,v 1.2 2001/01/24 21:25:53 dblack Exp $
+#  $Name: Taught-0-0-3-pre1 $
+#  $Author: dblack $
+
+use Date::Manip;
+use strict;
+
+die usage() unless @ARGV > 2;
+
+my ($start, $end) = (shift, shift);
+
+my $dows = join ',', split //, shift;
+
+my $spacing = shift || 4;
+
+# Add one day to $end, otherwise the range isn't inclusive.
+# The recur string means "Every 1th" of these days.
+print
+  map &UnixDate($_, "%A, %b %e" . "\n" x $spacing), 
+  &ParseRecur("0:0:1*$dows:0:0:0", $start, $start, &DateCalc($end, 1));
+
+sub usage {
+    return <<EOM;
+
+Usage: daygenerator dd/mm/yy dd/mm/yy mwf            3
+                    (start)  (end)    (days of week) (spacing - optional)
+
+EOM
+}
+
+

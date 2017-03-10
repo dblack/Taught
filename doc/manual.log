@@ -1,0 +1,1835 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=xmltex 2000.10.30)  31 OCT 2000 07:23
+**manual.fo
+(manual.fo
+LaTeX2e <1999/12/01> patch level 1
+Babel <v3.6Z> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+xmltex version: 2000-03-08 v0.14 DPC
+(/usr/local/share/texmf/tex/xmltex/base/xmltex.cfg) 
+No File: manual.cfg 
+ xmlns:fo = 5 
+ <5:root (/usr/local/share/texmf/tex/latex/passivetex/fotex.xmt
+
+URI: 6 = http://www.tug.org/fotex 
+ xmlns:fotex = 6 
+ xmlns:fo = 5 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content 
+ </0:> 
+ Grabbed content 
+ End Grabbed content) 
+     0:font-family = "Times Roman" 
+     0:font-size = "12pt" 
+     0:text-align = "justify"  > (/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 1999/09/10 v1.4a Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 1999/09/10 v1.4a Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/share/texmf/tex/latex/passivetex/fotex.sty
+Package: fotex 2000/10/19: version 1.2. support for XSL formatting, S Rahtz
+
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 1999/02/16 v1.0l Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf/tex/latex/tools/multicol.sty
+Package: multicol 1999/10/21 v1.5w multicolumn formatting (FMi)
+\c@tracingmulticols=\count88
+\mult@box=\box26
+\multicol@leftmargin=\dimen105
+\c@unbalance=\count89
+\c@collectmore=\count90
+\doublecol@number=\count91
+\multicoltolerance=\count92
+\multicolpretolerance=\count93
+\full@width=\dimen106
+\page@free=\dimen107
+\premulticols=\dimen108
+\postmulticols=\dimen109
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count94
+\c@finalcolumnbadness=\count95
+\last@try=\dimen110
+\multicolovershoot=\dimen111
+\multicolundershoot=\dimen112
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+)
+(/usr/share/texmf/tex/latex/misc/rotating.sty
+Package: rotating 1997/09/26, v2.13 Rotation package
+
+(/usr/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 1999/09/10 v1.1b Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count96
+\rot@float@box=\box52
+)
+(/usr/share/texmf/tex/latex/tools/array.sty
+Package: array 1998/05/13 v2.3m Tabular extension package (FMi)
+\col@sep=\dimen113
+\extrarowheight=\dimen114
+\NC@list=\toks18
+\extratabsurround=\skip45
+\backup@length=\skip46
+)
+(/usr/share/texmf/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/01/15 v2.05 AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf/tex/latex/amsmath/amstext.sty
+Package: amstext 1999/11/15 v2.0
+
+(/usr/share/texmf/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen115
+))
+(/usr/share/texmf/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen116
+)
+(/usr/share/texmf/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 198.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 302.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 376.
+LaTeX Info: Redefining \dots on input line 379.
+LaTeX Info: Redefining \cdots on input line 464.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen117
+LaTeX Font Info:    Redeclaring font encoding OML on input line 563.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 564.
+\macc@skew=\dimen118
+\c@MaxMatrixCols=\count102
+\dotsspace@=\muskip10
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
+\tag@help=\toks20
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
+\andhelp@=\toks21
+\eqnshift@=\dimen119
+\alignsep@=\dimen120
+\tagshift@=\dimen121
+\tagwidth@=\dimen122
+\totwidth@=\dimen123
+\lineht@=\dimen124
+\@envbody=\toks22
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+LaTeX Info: Redefining \[ on input line 2594.
+LaTeX Info: Redefining \] on input line 2595.
+)
+(/usr/share/texmf/tex/latex/tools/longtable.sty
+Package: longtable 1998/05/13 v4.09 Multi-page Table package (DPC)
+\LTleft=\skip50
+\LTright=\skip51
+\LTpre=\skip52
+\LTpost=\skip53
+\LTchunksize=\count108
+\LTcapwidth=\dimen125
+\LT@head=\box55
+\LT@firsthead=\box56
+\LT@foot=\box57
+\LT@lastfoot=\box58
+\LT@cols=\count109
+\LT@rows=\count110
+\c@LT@tables=\count111
+\c@LT@chunks=\count112
+\LT@p@ftn=\toks23
+)
+(/usr/share/texmf/tex/latex/misc/ulem.sty
+\UL@box=\box59
+\UL@hyphenbox=\box60
+\UL@skip=\skip54
+\UL@pe=\count113
+\UL@pixel=\dimen126
+\ULC@box=\box61
+Package: ulem 1997/04/21
+\ULdepth=\dimen127
+)
+(/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+
+(/usr/share/texmf/tex/latex/config/color.cfg)
+Package color Info: Driver file: dvips.def on input line 125.
+
+(/usr/share/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+(/usr/share/texmf/tex/latex/psnfss/times.sty
+Package: times 1999/03/29 PSNFSS v.7.2 Times font as default roman : S Rahtz
+)
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 1999/09/09 v3.6Z The Babel package
+
+(/usr/local/share/texmf/tex/latex/passivetex/nohyphenation.ldf
+File: nohyphenation.ldf 
+
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 1999/09/09 v3.6Z Babel common definitions
+\babel@savecnt=\count114
+\U@D=\dimen128
+))
+(/usr/share/texmf/tex/generic/babel/germanb.ldf
+Language: germanb 1999/04/05 v2.6g German support from the babel system
+\l@austrian = a dialect from \language\l@german 
+)
+(/usr/share/texmf/tex/generic/babel/portuges.ldf
+Language: portuges 1999/04/16 v1.2l Portuguese support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `Portuguese'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@portuges = a dialect from \language0
+) (/usr/share/texmf/tex/generic/babel/english.ldf
+Language: english 1999/04/11 v3.3i English support from the babel system
+)
+(/usr/share/texmf/tex/generic/babel/frenchb.ldf
+Language: frenchb 1999/08/18 v1.3g French support from the babel system
+)
+(/usr/local/share/texmf/tex/latex/passivetex/nohyphenation.ldf
+File: nohyphenation.ldf 
+))
+(/usr/local/share/texmf/tex/latex/passivetex/mlnames.sty
+Package: mlnames 2000/01/14, some XSL and Unicode support material, Sebastian R
+ahtz
+)
+(/usr/local/share/texmf/tex/latex/passivetex/unicode.sty
+Package: unicode 2000/01/13 S Rahtz: load various font-related packages for Uni
+code
+
+WARNING: tipa package not loaded. some symbols will fail
+(/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 1999/12/08 v1.9x Standard LaTeX package
+
+(/usr/share/texmf/tex/latex/cyrillic/t2aenc.def
+File: t2aenc.def 1999/11/29 v1.0c Cyrillic encoding definition file
+)
+(/usr/share/texmf/tex/latex/base/t1enc.def
+File: t1enc.def 1999/12/08 v1.9x Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 38.
+))
+(/usr/share/texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 1996/11/03 v2.2b
+
+(/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 1997/09/17 v2.2e
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 133.
+))
+(/usr/share/texmf/tex/latex/tools/bm.sty
+Package: bm 1999/07/05 v1.0g Bold Symbol Support (DPC/FMi)
+LaTeX Info: Redefining \bm on input line 195.
+)
+(/usr/share/texmf/tex/latex/base/textcomp.sty
+Package: textcomp 1999/12/08 v1.9x Standard LaTeX package
+
+(/usr/share/texmf/tex/latex/base/ts1enc.def
+File: ts1enc.def 1998/06/12 v3.0d (jk/car/fm) Standard LaTeX file
+))
+(/usr/share/texmf/tex/latex/psnfss/pifont.sty
+Package: pifont 1999/03/29 PSNFSS v.7.2 Pi font support : S Rahtz
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/share/texmf/tex/latex/psnfss/upzd.fd
+File: upzd.fd 1998/07/06 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/share/texmf/tex/latex/psnfss/upsy.fd
+File: upsy.fd 1998/07/06 font definitions for U/psy.
+))
+(/usr/share/texmf/tex/latex/wasysym/wasysym.sty
+Package: wasysym 1999/05/13 v1.0i Wasy-2 symbol support package
+\symwasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 50.
+)
+(/usr/share/texmf/tex/latex/misc/stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
+WARNING: Elsevier font setup not found
+(/usr/local/share/texmf/tex/latex/passivetex/dummyels.sty
+Package: dummyels 1999/12/06: S Rahtz; dummy Elsevier names
+)
+WARNING: mmasym package not loaded. some symbols will fail
+(/usr/share/texmf/tex/latex/amsfonts/eucal.sty
+Package: eucal 1995/01/06 v2.2 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 47.
+)
+LaTeX Info: Redefining \longrightarrow on input line 161.
+LaTeX Info: Redefining \longleftarrow on input line 163.
+\ex@=\dimen129
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 180.
+)
+\BlockBox=\box62
+\ItemBox=\box63
+\FOBOX=\box64
+
+(/usr/local/share/texmf/tex/latex/passivetex/ucharacters.sty)
+(/usr/share/texmf/tex/latex/misc/url.sty
+Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
+ names
+)
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2000/01/22 v6.69c Hypertext links for LaTeX
+\@linkdim=\dimen130
+\Hy@linkcounter=\count115
+\Hy@pagecounter=\count116
+
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 1999/10/05 v0.6 PDFDocEncoding (Heiko Oberdiek)
+)
+Package hyperref Info: Option `colorlinks' set `false' on input line 1408.
+Package hyperref Info: Bookmarks ON on input line 1459.
+Package hyperref Info: Hyper figures OFF on input line 1478.
+Package hyperref Info: Link nesting OFF on input line 1483.
+Package hyperref Info: Hyper index ON on input line 1486.
+Package hyperref Info: Plain pages ON on input line 1491.
+Package hyperref Info: Backreferencing OFF on input line 1498.
+
+Implicit mode ON; LaTeX internals redefined
+\Fld@menulength=\count117
+\Field@Width=\dimen131
+\Fld@charsize=\dimen132
+\Choice@toks=\toks24
+\Field@toks=\toks25
+Package hyperref Info: Hyper figures OFF on input line 2108.
+Package hyperref Info: Link nesting OFF on input line 2113.
+Package hyperref Info: Hyper index ON on input line 2116.
+Package hyperref Info: backreferencing OFF on input line 2123.
+Package hyperref Info: Link coloring OFF on input line 2128.
+\c@Item=\count118
+\c@Hfootnote=\count119
+)
+*hyperref using default driver hypertex*
+(/usr/share/texmf/tex/latex/hyperref/hypertex.def)
+(/usr/share/texmf/tex/latex/hyperref/nameref.sty
+Package: nameref 2000/01/19 v2.17 Cross-referencing by name of section
+\c@section@level=\count120
+)
+\ColSpecs=\toks26
+\NCols=\count121
+\ColCount=\count122
+\RowCount=\count123
+\FOListBlocks=\count124
+\TableWidth=\dimen133
+\FOafterskip=\skip55
+\@default=\dimen134
+\MasterLeftMargin=\dimen135
+\MasterRightMargin=\dimen136
+\MasterBottomMargin=\dimen137
+\MasterTopMargin=\dimen138
+\bottommargin=\dimen139
+) (manual.aux)
+\openout1 = `manual.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT2/wncyr/m/n on input line 2.
+LaTeX Font Info:    Try loading font information for OT2+wncyr on input line 2.
+
+
+(/usr/share/texmf/tex/latex/cyrillic/ot2wncyr.fd
+File: ot2wncyr.fd 1999/05/31 v3.2 Computer Modern Cyrillic font definitions
+)
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 2.
+LaTeX Font Info:    Try loading font information for T2A+cmr on input line 2.
+
+(/usr/share/texmf/tex/latex/cyrillic/t2acmr.fd
+File: t2acmr.fd 1999/01/07 v1.0 Computer Modern Cyrillic font definitions
+)
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 2.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 2.
+
+(/usr/share/texmf/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for LECO/omseco/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for LECX/omsecx/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for LECY/omsecy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for LEGR/omsegr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for LEHA/omseha/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for LEIP/omseip/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for LELA/omsela/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for LETI/omseti/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 2.
+
+(/usr/share/texmf/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 1998/07/06 Fontinst v1.800 font definitions for T1/ptm.
+)
+Package hyperref Info: Link coloring OFF on input line 2.
+LaTeX Info: Redefining \ref on input line 2.
+LaTeX Info: Redefining \pageref on input line 2.
+ 
+  <5:layout-master-set  >
+Start defining page masters
+
+   <5:page-sequence-master 
+       0:master-name = "pages"  >
+Page sequence master: pages
+
+    <5:repeatable-page-master-alternatives  >
+ (complex page layout with alternatives)
+
+     <5:conditional-page-master-reference 
+         0:odd-or-even = "odd" 
+         0:master-name = "right"  >
+ Odd page for pages: right
+
+     </5:conditional-page-master-reference>
+
+     <5:conditional-page-master-reference 
+         0:odd-or-even = "even" 
+         0:master-name = "left"  >
+ Even page for pages: left
+
+     </5:conditional-page-master-reference>
+
+    </5:repeatable-page-master-alternatives> 
+   </5:page-sequence-master> 
+   <5:simple-page-master 
+       0:master-name = "right" 
+       0:margin-top = "75pt" 
+       0:margin-bottom = "25pt" 
+       0:margin-left = "100pt" 
+       0:margin-right = "50pt"  >
+Define page master right, 50pt/100pt
+
+    <5:region-body 
+        0:margin-bottom = "50pt"  >
+ Set up [right:xsl-region-body] body content: 12.0pt|1|50pt|75pt|
+
+    </5:region-body> 
+    <5:region-after 
+        0:extent = "25pt"  >
+ Link [right:after] to xsl-region-after
+
+    </5:region-after> 
+   </5:simple-page-master> 
+   <5:simple-page-master 
+       0:master-name = "left" 
+       0:margin-top = "75pt" 
+       0:margin-bottom = "25pt" 
+       0:margin-left = "50pt" 
+       0:margin-right = "100pt"  >
+Define page master left, 100pt/50pt
+
+    <5:region-body 
+        0:margin-bottom = "50pt"  >
+ Set up [left:xsl-region-body] body content: 12.0pt|1|50pt|75pt|
+
+    </5:region-body> 
+    <5:region-after 
+        0:extent = "25pt"  >
+ Link [left:after] to xsl-region-after
+
+    </5:region-after> 
+   </5:simple-page-master> 
+  </5:layout-master-set>
+Finish defining page masters
+
+  <5:page-sequence 
+      0:master-name = "pages" 
+      0:id = "N2593"  > 
+   <5:flow  >
+
+Start page sequence, using layout pages, at page 1
+Master pages: no first page defined, use odd page
+ first page master is [right]
+ odd page master is [right]
+ even page master is [left]
+Page size is 464.295pt/544.96999pt, on paper 614.295pt/794.96999pt,
+ with paper margins 100.0pt/50.0pt, and region margins 75.0pt/25.0pt;
+ footskip is 30.0pt, headsep is 75.0pt
+ evensidemargin 50.0pt, oddsidemargin 100.0pt
+
+    <5:block  > 
+     <5:block 
+         0:font-size = "20pt" 
+         0:font-weight = "bold" 
+         0:space-before.optimum = "8em"  >
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+ 
+     </5:block> 
+     <5:block 
+         0:font-size = "18pt" 
+         0:font-weight = "bold"  >
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <18> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+ 
+     </5:block> 
+    </5:block> 
+   </5:flow> [1
+
+
+] 
+  </5:page-sequence> 
+  <5:page-sequence 
+      0:master-name = "pages" 
+      0:id = "N2598"  > 
+   <5:static-content 
+       0:flow-name = "xsl-region-after"  > 
+    <5:block 
+        0:text-align-last = "center" 
+        0:font-size = "10pt"  > 
+     <5:page-number  > 
+     </5:page-number> 
+    </5:block> 
+   </5:static-content> 
+   Grabbed content
+ set up static area Static:xsl-region-after [<5:block^^I0:text-align-last="cent
+er" 0:font-size="10pt" ><5:page-number^^I></5:page-number></5:block>]
+
+   End Grabbed content 
+   <5:flow  >
+
+Start page sequence, using layout pages, at page 2
+Master pages: no first page defined, use even page
+ first page master is [left]
+ odd page master is [right]
+ even page master is [left]
+Page size is 464.295pt/544.96999pt, on paper 614.295pt/794.96999pt,
+ with paper margins 100.0pt/50.0pt, and region margins 75.0pt/25.0pt;
+ footskip is 30.0pt, headsep is 75.0pt
+ evensidemargin 50.0pt, oddsidemargin 100.0pt
+
+    <5:block  > 
+     <5:block 
+         0:font-size = "18pt" 
+         0:font-weight = "bold"  > 
+     </5:block> 
+    </5:block> 
+    <5:block 
+        0:space-before.optimum = "1em"
+
+        0:space-before.minimum = "0.8em"
+
+        0:space-before.maximum = "1.2em"  > 
+    </5:block> 
+    <5:block 
+        0:space-before.optimum = "1em"
+
+        0:space-before.minimum = "0.8em"
+
+        0:space-before.maximum = "1.2em"  > 
+    </5:block> 
+    <5:block 
+        0:space-before.optimum = "1em"
+
+        0:space-before.minimum = "0.8em"
+
+        0:space-before.maximum = "1.2em"  > 
+    </5:block> 
+    <5:block 
+        0:space-before.optimum = "1em"
+
+        0:space-before.minimum = "0.8em"
+
+        0:space-before.maximum = "1.2em"  > 
+    </5:block> 
+    <5:block 
+        0:id = "N2609"  > 
+     <5:block  > 
+      <5:block 
+          0:font-size = "16pt" 
+          0:font-weight = "bold" 
+          0:space-before.minimum = "1em"
+
+          0:space-before.optimum = "1.5em"
+
+          0:space-before.maximum = "2em"  >
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <16> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 23.
+ 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+    </5:block> 
+    <5:block 
+        0:id = "N2622"  > 
+     <5:block  > 
+      <5:block 
+          0:font-size = "16pt" 
+          0:font-weight = "bold" 
+          0:space-before.minimum = "1em"
+
+          0:space-before.optimum = "1.5em"
+
+          0:space-before.maximum = "2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+      <5:inline 
+          0:font-weight = "bold"  > 
+      </5:inline> 
+      Grabbed content
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 30.
+ 
+      End Grabbed content 
+     </5:block> 
+     <5:block 
+         0:wrap-option = "no-wrap" 
+         0:text-align = "start" 
+         0:white-space-collapse = "false"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.optimum = "1em"
+
+         0:space-before.maximum = "1.2em"  > 
+      <5:inline 
+          0:font-weight = "bold" 
+          0:font-family = "monospace"  > 
+      </5:inline> 
+      Grabbed content
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 33.
+ (/usr/share/texmf/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 1998/07/06 Fontinst v1.800 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 33.
+
+
+      End Grabbed content 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+      <5:inline 
+          0:font-weight = "bold"  > 
+      </5:inline> 
+      Grabbed content 
+      End Grabbed content 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:wrap-option = "no-wrap" 
+         0:text-align = "start" 
+         0:white-space-collapse = "false"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.optimum = "1em"
+
+         0:space-before.maximum = "1.2em"  > 
+      <5:inline 
+          0:font-weight = "bold" 
+          0:font-family = "monospace"  > 
+      </5:inline> 
+      Grabbed content 
+      End Grabbed content 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+    </5:block> 
+   </5:flow> 
+    <5:block 
+        0:text-align-last = "center" 
+        0:font-size = "10pt"  > 
+     <5:page-number  > 
+     </5:page-number> 
+    </5:block> [2
+
+
+] 
+  </5:page-sequence> 
+  <5:page-sequence 
+      0:master-name = "pages" 
+      0:id = "N2653"  > 
+   <5:static-content 
+       0:flow-name = "xsl-region-after"  > 
+    <5:block 
+        0:text-align-last = "center" 
+        0:font-size = "10pt"  > 
+     <5:page-number  > 
+     </5:page-number> 
+    </5:block> 
+   </5:static-content> 
+   Grabbed content
+ set up static area Static:xsl-region-after [<5:block^^I0:text-align-last="cent
+er" 0:font-size="10pt" ><5:page-number^^I></5:page-number></5:block>]
+
+   End Grabbed content 
+   <5:flow  >
+
+Start page sequence, using layout pages, at page 3
+Master pages: no first page defined, use odd page
+ first page master is [right]
+ odd page master is [right]
+ even page master is [left]
+Page size is 464.295pt/544.96999pt, on paper 614.295pt/794.96999pt,
+ with paper margins 100.0pt/50.0pt, and region margins 75.0pt/25.0pt;
+ footskip is 30.0pt, headsep is 75.0pt
+ evensidemargin 50.0pt, oddsidemargin 100.0pt
+
+    <5:block  > 
+     <5:block 
+         0:font-size = "18pt" 
+         0:font-weight = "bold"  > 
+     </5:block> 
+    </5:block> 
+    <5:block 
+        0:id = "N2656"  > 
+     <5:block  > 
+      <5:block 
+          0:font-size = "16pt" 
+          0:font-weight = "bold" 
+          0:space-before.minimum = "1em"
+
+          0:space-before.optimum = "1.5em"
+
+          0:space-before.maximum = "2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:wrap-option = "no-wrap" 
+         0:text-align = "start" 
+         0:white-space-collapse = "false"
+
+         0:font-family = "monospace"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.optimum = "1em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+    </5:block> 
+    <5:block 
+        0:id = "N2670"  > 
+     <5:block  > 
+      <5:block 
+          0:font-size = "16pt" 
+          0:font-weight = "bold" 
+          0:space-before.minimum = "1em"
+
+          0:space-before.optimum = "1.5em"
+
+          0:space-before.maximum = "2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:wrap-option = "no-wrap" 
+         0:text-align = "start" 
+         0:white-space-collapse = "false"
+
+         0:font-family = "monospace"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.optimum = "1em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+      <5:block 
+          0:text-align-last = "center" 
+          0:font-size = "10pt"  > 
+       <5:page-number  > 
+       </5:page-number> 
+      </5:block> [3
+
+
+] 
+    </5:block> 
+    <5:block 
+        0:id = "N2678"  > 
+     <5:block  > 
+      <5:block 
+          0:font-size = "16pt" 
+          0:font-weight = "bold" 
+          0:space-before.minimum = "1em"
+
+          0:space-before.optimum = "1.5em"
+
+          0:space-before.maximum = "2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:wrap-option = "no-wrap" 
+         0:text-align = "start" 
+         0:white-space-collapse = "false"
+
+         0:font-family = "monospace"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.optimum = "1em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:wrap-option = "no-wrap" 
+         0:text-align = "start" 
+         0:white-space-collapse = "false"
+
+         0:font-family = "monospace"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.optimum = "1em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:wrap-option = "no-wrap" 
+         0:text-align = "start" 
+         0:white-space-collapse = "false"
+
+         0:font-family = "monospace"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.optimum = "1em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+      <5:block 
+          0:text-align-last = "center" 
+          0:font-size = "10pt"  > 
+       <5:page-number  > 
+       </5:page-number> 
+      </5:block> [4] 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+    </5:block> 
+   </5:flow> 
+    <5:block 
+        0:text-align-last = "center" 
+        0:font-size = "10pt"  > 
+     <5:page-number  > 
+     </5:page-number> 
+    </5:block> [5] 
+  </5:page-sequence> 
+  <5:page-sequence 
+      0:master-name = "pages" 
+      0:id = "N2702"  > 
+   <5:static-content 
+       0:flow-name = "xsl-region-after"  > 
+    <5:block 
+        0:text-align-last = "center" 
+        0:font-size = "10pt"  > 
+     <5:page-number  > 
+     </5:page-number> 
+    </5:block> 
+   </5:static-content> 
+   Grabbed content
+ set up static area Static:xsl-region-after [<5:block^^I0:text-align-last="cent
+er" 0:font-size="10pt" ><5:page-number^^I></5:page-number></5:block>]
+
+   End Grabbed content 
+   <5:flow  >
+
+Start page sequence, using layout pages, at page 6
+Master pages: no first page defined, use even page
+ first page master is [left]
+ odd page master is [right]
+ even page master is [left]
+Page size is 464.295pt/544.96999pt, on paper 614.295pt/794.96999pt,
+ with paper margins 100.0pt/50.0pt, and region margins 75.0pt/25.0pt;
+ footskip is 30.0pt, headsep is 75.0pt
+ evensidemargin 50.0pt, oddsidemargin 100.0pt
+
+    <5:block  > 
+     <5:block 
+         0:font-size = "18pt" 
+         0:font-weight = "bold"  > 
+     </5:block> 
+    </5:block> 
+    <5:block 
+        0:id = "N2705"  > 
+     <5:block  > 
+      <5:block 
+          0:font-size = "16pt" 
+          0:font-weight = "bold" 
+          0:space-before.minimum = "1em"
+
+          0:space-before.optimum = "1.5em"
+
+          0:space-before.maximum = "2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+    </5:block> 
+    <5:block 
+        0:id = "N2713"  > 
+     <5:block  > 
+      <5:block 
+          0:font-size = "16pt" 
+          0:font-weight = "bold" 
+          0:space-before.minimum = "1em"
+
+          0:space-before.optimum = "1.5em"
+
+          0:space-before.maximum = "2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:list-block 
+         0:id = "N2718" 
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.optimum = "1em"
+
+         0:space-before.maximum = "1.2em"  > 
+      <5:list-item 
+          0:id = "N2721" 
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:list-item-label  > 
+        <5:block  > 
+        </5:block> 
+       </5:list-item-label> 
+       Grabbed content 
+        <5:block  > 
+        </5:block> 
+        <5:block  > 
+        </5:block> 
+       End Grabbed content 
+       <5:list-item-body  > 
+        <5:block  > 
+        </5:block> 
+       </5:list-item-body> 
+      </5:list-item> 
+      <5:list-item 
+          0:id = "N2724" 
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:list-item-label  > 
+        <5:block  > 
+        </5:block> 
+       </5:list-item-label> 
+       Grabbed content 
+        <5:block  > 
+        </5:block> 
+        <5:block  > 
+        </5:block> 
+       End Grabbed content 
+       <5:list-item-body  > 
+        <5:block  > 
+        </5:block> 
+       </5:list-item-body> 
+      </5:list-item> 
+      <5:list-item 
+          0:id = "N2727" 
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:list-item-label  > 
+        <5:block  > 
+        </5:block> 
+       </5:list-item-label> 
+       Grabbed content 
+        <5:block  > 
+        </5:block> 
+        <5:block  > 
+        </5:block> 
+       End Grabbed content 
+       <5:list-item-body  > 
+        <5:block  > 
+        </5:block> 
+       </5:list-item-body> 
+      </5:list-item> 
+     </5:list-block> 
+     <5:block 
+         0:id = "N2730"  > 
+      <5:block  > 
+       <5:block 
+           0:font-size = "14pt" 
+           0:font-weight = "bold" 
+           0:space-before.minimum = "1em"
+
+           0:space-before.optimum = "1.5em"
+
+           0:space-before.maximum = "2em"  >
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 156.
+ 
+       </5:block> 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:id = "N2739"  > 
+      <5:block  > 
+       <5:block 
+           0:font-size = "14pt" 
+           0:font-weight = "bold" 
+           0:space-before.minimum = "1em"
+
+           0:space-before.optimum = "1.5em"
+
+           0:space-before.maximum = "2em"  > 
+       </5:block> 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:wrap-option = "no-wrap" 
+          0:text-align = "start" 
+          0:white-space-collapse = "false"
+
+          0:font-family = "monospace"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:wrap-option = "no-wrap" 
+          0:text-align = "start" 
+          0:white-space-collapse = "false"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:inline 
+           0:font-weight = "bold" 
+           0:font-family = "monospace"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+      </5:block> 
+       <5:block 
+           0:text-align-last = "center" 
+           0:font-size = "10pt"  > 
+        <5:page-number  > 
+        </5:page-number> 
+       </5:block> [6
+
+
+] 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:id = "N2757"  > 
+      <5:block  > 
+       <5:block 
+           0:font-size = "14pt" 
+           0:font-weight = "bold" 
+           0:space-before.minimum = "1em"
+
+           0:space-before.optimum = "1.5em"
+
+           0:space-before.maximum = "2em"  > 
+       </5:block> 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:wrap-option = "no-wrap" 
+          0:text-align = "start" 
+          0:white-space-collapse = "false"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:inline 
+           0:font-weight = "bold" 
+           0:font-family = "monospace"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+     </5:block> 
+    </5:block> 
+    <5:block 
+        0:id = "N2772"  > 
+     <5:block  > 
+      <5:block 
+          0:font-size = "16pt" 
+          0:font-weight = "bold" 
+          0:space-before.minimum = "1em"
+
+          0:space-before.optimum = "1.5em"
+
+          0:space-before.maximum = "2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:space-before.optimum = "1em"
+
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.maximum = "1.2em"  > 
+     </5:block> 
+     <5:list-block 
+         0:id = "N2777" 
+         0:space-before.minimum = "0.8em"
+
+         0:space-before.optimum = "1em"
+
+         0:space-before.maximum = "1.2em"  > 
+      <5:list-item 
+          0:id = "N2780" 
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:list-item-label  > 
+        <5:block  > 
+        </5:block> 
+       </5:list-item-label> 
+       Grabbed content 
+        <5:block  > 
+        </5:block> 
+        <5:block  > 
+        </5:block> 
+       End Grabbed content 
+       <5:list-item-body  > 
+        <5:block  > 
+        </5:block> 
+       </5:list-item-body> 
+      </5:list-item> 
+      <5:list-item 
+          0:id = "N2783" 
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:list-item-label  > 
+        <5:block  > 
+        </5:block> 
+       </5:list-item-label> 
+       Grabbed content 
+        <5:block  > 
+        </5:block> 
+        <5:block  > 
+        </5:block> 
+       End Grabbed content 
+       <5:list-item-body  > 
+        <5:block  > 
+        </5:block> 
+       </5:list-item-body> 
+      </5:list-item> 
+     </5:list-block> 
+     <5:block 
+         0:id = "N2786"  > 
+      <5:block  > 
+       <5:block 
+           0:font-size = "14pt" 
+           0:font-weight = "bold" 
+           0:space-before.minimum = "1em"
+
+           0:space-before.optimum = "1.5em"
+
+           0:space-before.maximum = "2em"  > 
+       </5:block> 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:id = "N2793"  > 
+      <5:block  > 
+       <5:block 
+           0:font-size = "14pt" 
+           0:font-weight = "bold" 
+           0:space-before.minimum = "1em"
+
+           0:space-before.optimum = "1.5em"
+
+           0:space-before.maximum = "2em"  > 
+       </5:block> 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:inline 
+           0:font-weight = "bold"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+      </5:block> 
+      <5:block 
+          0:wrap-option = "no-wrap" 
+          0:text-align = "start" 
+          0:white-space-collapse = "false"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:inline 
+           0:font-weight = "bold" 
+           0:font-family = "monospace"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:inline 
+           0:font-weight = "bold"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+       <5:inline 
+           0:font-weight = "bold"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:block 
+           0:text-align-last = "center" 
+           0:font-size = "10pt"  > 
+        <5:page-number  > 
+        </5:page-number> 
+       </5:block> [7] 
+      </5:block> 
+      <5:block 
+          0:wrap-option = "no-wrap" 
+          0:text-align = "start" 
+          0:white-space-collapse = "false"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:inline 
+           0:font-family = "monospace"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:inline 
+           0:font-weight = "bold"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+       <5:inline 
+           0:font-weight = "bold"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+       <5:inline 
+           0:font-weight = "bold"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+      </5:block> 
+     </5:block> 
+    </5:block> 
+    <5:block 
+        0:id = "N2845"  > 
+     <5:block  > 
+      <5:block 
+          0:font-size = "16pt" 
+          0:font-weight = "bold" 
+          0:space-before.minimum = "1em"
+
+          0:space-before.optimum = "1.5em"
+
+          0:space-before.maximum = "2em"  > 
+      </5:block> 
+     </5:block> 
+     <5:block 
+         0:id = "N2848"  > 
+      <5:block  > 
+       <5:block 
+           0:font-size = "14pt" 
+           0:font-weight = "bold" 
+           0:space-before.minimum = "1em"
+
+           0:space-before.optimum = "1.5em"
+
+           0:space-before.maximum = "2em"  > 
+       </5:block> 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:wrap-option = "no-wrap" 
+          0:text-align = "start" 
+          0:white-space-collapse = "false"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.optimum = "1em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:inline 
+           0:font-weight = "bold" 
+           0:font-family = "monospace"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+      </5:block> 
+      <5:block 
+          0:space-before.optimum = "1em"
+
+          0:space-before.minimum = "0.8em"
+
+          0:space-before.maximum = "1.2em"  > 
+       <5:block 
+           0:text-align-last = "center" 
+           0:font-size = "10pt"  > 
+        <5:page-number  > 
+        </5:page-number> 
+       </5:block> [8] 
+       <5:inline 
+           0:font-weight = "bold"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+       <5:inline 
+           0:font-family = "monospace"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+       <5:inline 
+           0:font-family = "monospace"  > 
+       </5:inline> 
+       Grabbed content 
+       End Grabbed content 
+      </5:block> 
+     </5:block> 
+    </5:block> 
+   </5:flow> 
+    <5:block 
+        0:text-align-last = "center" 
+        0:font-size = "10pt"  > 
+     <5:page-number  > 
+     </5:page-number> 
+    </5:block> [9] 
+  </5:page-sequence> 
+ </5:root> (manual.aux)
+
+LaTeX Warning: Label(s) may have changed.Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 8597 strings out of 50535
+ 88429 string characters out of 444368
+ 162407 words of memory out of 384000
+ 11820 multiletter control sequences out of 10000+50000
+ 15967 words of font info for 26 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 38i,8n,32p,2036b,2982s stack positions out of 1500i,500n,1500p,50000b,10000s
+
+Output written on manual.dvi (9 pages, 18248 bytes).

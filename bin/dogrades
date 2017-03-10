@@ -1,0 +1,186 @@
+#!/usr/bin/perl -w
+#
+#   dogrades
+#
+#   Given a filled-out gradesheet, calculates final semester
+#   grades for everyone and puts them in a file called "report".
+#
+#   Given a -t (term) parameter, will recurse through the courses
+#   and sections, doing all of them it can.
+#
+#   -v (verbose) option causes a wordier version of the output
+#   to go to stdout, while the file is still written.
+#
+# $Id: dogrades,v 1.2 2001/01/24 21:19:14 dblack Exp $
+# $Name: Taught-0-0-3-pre1 $
+# $Author: dblack $
+
+use strict;
+
+use Taught qw(:standard);
+use Taught::GradeSheet;
+use Taught::GradeReport;
+use Taught::GradeTool qw(:standard);
+use Getopt::Std;
+
+use vars qw($VERSION);
+$VERSION = 0.0.3
+
+scan Taught;
+my %opts;
+getopts('t:c:s:y:v', \%opts);
+
+my ($Term, $Course, $Section) = map { $_ || "" } @opts{qw( t c s )};
+die usage() unless $Term;
+die usage() if $Section &&! $Course;
+my $verbose = $opts{v};
+
+my $ttree = ttree($Term, $Course, $Section);
+my (@courses) = keys % {$ttree->{$Term}};
+
+my $type = $opts{y} || "setonhall";
+
+my $gradesub = Taught::GradeTool -> $type;
+
+COURSE:
+for my $course (@courses) {
+    my @sections = keys % {$ttree->{$Term}{$course}};
+
+    SECTION:
+    for my $section(@sections) {
+        my %grades;
+        tie %grades,
+            "Taught::GradeSheet",
+                ($Term, $course, $section, { RO => 1 });
+        
+        if (! keys %grades) {
+            print "No grades available for $Term, $course, $section\n";
+            next SECTION;
+        }
+        
+        my %course;
+        tie %course,
+            "Taught::CourseFile",
+                ($Term, $course, { RO => 1 });
+        
+        if (! keys %course) {
+            print "No course description file available for $Term, $course\n";
+            next COURSE;
+        }
+        
+        my %report;
+        tie %report,
+            "Taught::GradeReport",
+                ($Term, $course, $section);
+
+        print "Processing $Term, $course, $section....\n";
+        
+        STUDENT:
+        for my $s (sort keys %grades) {
+            my $total = 0;
+            my $zero = 0;
+            my $done = 0;
+        
+            if ($verbose) { print "$s\n" }
+            for my $r (sort keys %course) {
+                my $v = $course{$r}{Value};
+                my $g = uc $grades{$s}{$r};
+                my $n = $marks{$g};
+                $n ? ($done += $v) : ($zero += $v);     # Either did assignment or not.
+        
+                $total += $n * $v;
+        
+                if ($verbose) {
+                    printf "\t%-15s%-5s%-6s\n", $r, "$v%", $g;
+                }
+            }
+            &$gradesub($s, $total, $done, $zero, \%report, $verbose);
+
+        }   # student
+    }       # section
+}           # course
+
+sub usage {
+    <<EOM
+
+Usage:  dogrades -t term [-c course [-s section]] [-v]
+
+Options:
+   -v    verbose
+
+EOM
+}
+
+__END__
+
+=head1 NAME
+
+dogrades -- calculate final semester grades for one or more sections
+
+=head1 SYNOPSIS
+
+    # Calculate final grade lists for all sections of all courses
+    # in a given term
+    dogrades -t term
+
+    # Calculate final grade lists for all sections of a given course
+    dogrades -t term -c course
+
+    # Calculate final grade lists for a particular section
+    dogrades -t term -c course -s section
+
+    # Operate in verbose mode
+    dogrades -v ...
+
+=head1 DESCRIPTION
+
+B<dogrades> calculates final grades for one or more sections (as defined in the
+Taught suite specification), and saves the resulting list to a file called
+F<report> in the section's directory.
+
+If fed only a term (the B<-t> option), B<dogrades> will recursively process all
+sections of all courses for that term.
+
+If fed a term and a course (B<-c>), B<dogrades> will process all sections of that
+course for that term.
+
+In verbose mode (B<-v>), dogrades prints a much longer, detailed account of its
+calculations to stdout, while still saving the results to F<report>..
+
+=head2 Changing dogrades's calculating behavior
+
+B<dogrades> calls a routine called gradecalc(), the source for which is
+contained in the Taught::GradeTool module.  That module defines the
+grade scale (A,B,C... or percentages, or whatever) and does the calculations.
+The point being: you can change, edit, or replace F<GradeTool.pm>, and the
+grading behavior you get will change.  
+
+See F<GradeTool.pm> for more details on how to write a gradecalc() routine
+to suit your purposes.
+
+=head1 AUTHOR
+
+David Alan Black (blackdav@shu.edu), Associate Professor, Department of
+Communication, Seton Hall University, South Orange, NJ 07079. 
+
+=head1 COPYRIGHT AND DISCLAIMER
+
+Copyright (c) 2000, David Alan Black.  This program is free software;
+you may redistribute it and/or modify it under the same terms as Perl
+itself.  This software comes with no warranty of any kind whatsoever.
+Use at your own risk.
+
+=head1 HISTORY
+
+This software is part of the Taught suite of course-maintenance software.
+Taught has developed (and is still developing) out of various small
+programs and modules I've written and had scattered around for years.
+
+=head1 SEE ALSO
+
+The rest of the Taught software package, which is available at
+E<lt>I<http://icarus.shu.edu/dblack/taught>E<gt>.  My Web site, which includes
+other software and documents of possible interest to teachers, is at
+E<lt>I<http://pirate.shu.edu/~blackdav>E<gr>.
+
+=cut

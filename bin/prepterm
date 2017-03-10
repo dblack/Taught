@@ -1,0 +1,68 @@
+#!/usr/bin/perl -w
+#
+# prepterm -- create the documents (grade sheets, attendance lists)
+#             for the new semester.
+#
+# David A. Black
+# September 2000
+#
+# $Id: prepterm,v 1.2 2001/01/24 21:25:53 dblack Exp $
+# $Name: Taught-0-0-3-pre1 $
+# $Author: dblack $
+
+$| = 1;
+use lib "..";
+use strict;
+use Getopt::Std;
+use Taught qw(:standard);
+use Taught::Roster;
+use Taught::CourseFile;
+
+scan Taught;
+
+my %opts;
+getopts("rt:", \%opts);
+
+my $t = $opts{t}                        or die usage();
+isterm($t)                              or die "No such term: $t\n";
+my @courses = courses_in($t)        or die "Term $t has no courses\n";
+
+my $force = $opts{r} || 0;
+
+COURSE:
+for my $c (@courses) {
+    my @reqs = keys % {{reqs($t, $c)}};     # Requirements
+
+SECTION:
+    for my $s (sections_of($t, $c)) {
+        my %roster;
+        my $ros = tie %roster, "Taught::Roster", ($t, $c, $s);
+
+        if (keys %roster) {
+            system("makegrid -t $t -c $c -s $s -r");
+        }
+        else {
+            print "No students in section $s of $c\n";
+            next SECTION;
+        }
+
+        if (@reqs) {
+            for my $r (@reqs) {
+                system("makelist -r -t $t -c $c -s $s -q \"$r\"");
+            }
+        }
+        else {
+            print "No requirements for $c\n";
+            next COURSE;
+        }
+    }
+}
+
+sub usage {
+<<EOM;
+
+Usage:   prepterm -t <term>
+
+EOM
+}
+

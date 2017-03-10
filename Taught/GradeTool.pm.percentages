@@ -1,0 +1,37 @@
+package Taught::GradeTool;
+
+#   Base package for anything which needs to know about grade calibration.
+
+# $Id: GradeTool.pm.percentages,v 1.2 2001/01/24 21:18:54 dblack Exp $
+# $Name: Taught-0-0-3-pre1 $
+# $Author: dblack $
+
+use strict;
+use vars qw(@letters %marks %numbs @ISA @EXPORT_OK %EXPORT_TAGS);
+use Exporter;
+
+@ISA = qw(Exporter);
+@EXPORT_OK = qw(%marks %numbs gradecalc @ISA @EXPORT_OK );
+%EXPORT_TAGS = ( standard => [ @EXPORT_OK ] );
+
+sub percents {
+
+#   For this one, numbers map by decades onto letters.
+#
+
+%numbs = 
+            (   (map { $_, 'A' } (90..100)),
+                (map { $_, 'B' } (80..89)),
+                (map { $_, 'C' } (70..79)),
+                (map { $_, 'D' } (60..69)),
+                (map { $_, 'F' } (0..59)), );
+
+
+%marks = map { $_, $_ } (0..100);
+$marks{N} = $marks{NC} = 0;
+
+    return sub {
+    my ($s, $total, undef, undef, $report, $verbose) = @_;
+    $report->{$s} = $numbs{sprintf "%.2d", $total / 100 + .5};
+    }
+}

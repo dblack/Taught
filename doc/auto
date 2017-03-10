@@ -1,0 +1,23 @@
+master: teaching
+term: fall1999
+course: eage
+section: aa
+section: bb
+req: Exam 1 = 25
+req: Exam 2 = 25
+req: Exam 3 = 25
+req: Paper = 25
+course: seminar
+section: aa
+section: na
+req: Paper = 30
+req: Group = 30
+req: Citizenship = 40
+term: spring2000
+course: eage
+section: aa
+section: bb
+req: Exam 1 = 25
+req: Exam 2 = 25
+req: Exam 3 = 25
+req: Paper = 25

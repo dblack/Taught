@@ -1,0 +1,115 @@
+#!/usr/bin/perl -w
+
+#  gradelog -- interactively record grades for a particular assignment
+#  gradelog -t term -c course -s section
+#
+#  $Id: gradelog,v 1.3 2001/01/24 21:25:53 dblack Exp $
+#  $Name: Taught-0-0-3-pre1 $
+#  $Author: dblack $
+
+use vars qw(@ISA $VERSION);
+use Taught::GradeTool qw(:standard);
+use Taught::GradeSheet;
+use Getopt::Std;
+
+@ISA = qw(Taught::GradeTool);
+$VERSION = '0.0.3';
+
+use strict;
+
+my %opts;
+getopts("t:c:s:", \%opts);
+
+my ($t, $c, $s) = @opts{qw(t c s)};
+
+die usage() unless $t && $c && $s;
+
+Taught::GradeTool -> setonhall;
+
+my $params =  {
+            Term        => $t,
+            Course  => $c,
+            Section => $s,
+};
+
+my %grades;
+my $gr = tie %grades, "Taught::GradeSheet", $params; 
+
+my @ex = $gr->extras;
+my @mi = $gr->missing;
+
+if (@ex) {
+    print
+        join ("\n\t",
+            "Warning: these students are on gradesheet but not roster:\n\t",
+            @ex),
+        "\n";
+}
+
+if (@mi) {
+    print
+        join ("\n\t",
+            "Warning: these students are on roster but not gradesheet:\n\t",
+            @mi),
+        "\n";
+}
+
+my @reqs = $gr->reqs;
+my @studs = sort keys %{{ map { $_, $_ }
+                                    ($gr->on_roster, $gr->on_sheet) }};
+
+die
+    "No students for term $t, course $c, section $s\n"
+    . (@reqs 
+        ? ""
+        : "No requirements for term $t, course $c, section $s\n")
+unless @studs;
+
+#   Initialize every field for every student.  (Without doing this,
+#   nothing seems to work later - ?)
+for my $st (@studs) {
+    $grades{$st} = $grades{$st} ||
+                        [ map { $grades{$st} && $grades{$st}{$_} || '_'
+                                } @reqs ];
+}
+
+my $n = 1;
+for my $req (@reqs) {
+    print "$n ... $req\n";
+    $n++;
+}
+
+$n = 1;
+while ($n) {
+    print "Which assignment? ";
+    chomp ($n = <STDIN>);
+    last unless $n;
+
+    my $ass = $reqs[$n - 1];
+    
+    #   In particular, the $grades{$s}{$ass} has no effect
+    #   on the file, unless $grades{$s} has been initialized
+    #   as above.  
+    for my $s (@studs) {
+        my $g = uc($grades{$s}{$ass});
+        print "$ass, $s: ";
+        if (exists $marks{$g}) {
+            print "[$g] ";
+        }
+        chomp (my $ng = <STDIN>);
+        $grades{$s}{$ass} = uc $ng if $ng =~ /\w/;
+    }
+}
+
+undef $gr;
+untie %grades;
+
+sub usage {
+    <<EOM;
+
+Usage: gradelog -t term -c course -s section
+
+EOM
+}
+
+__END__
